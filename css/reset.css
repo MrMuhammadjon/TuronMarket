@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    font-family: var(--font-family-1);
 }
 
 :root{
@@ -28,7 +31,7 @@
 
     /* fon-famly */
 
-    --font-family-1: 'Montserrat', sans-serif;
+    --font-family-1: 'Montserrat';
     --font-family-2: 'Montserrat Alternates', sans-serif;
     --font-family-3: 'Roboto', sans-serif;
     --font-family-4: 'Rubik', sans-serif;
@@ -103,7 +106,104 @@ header{
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    padding: 20px 40px;
-    background-color: var(--color-light-green-2);
     box-shadow: var(--box-shadow-1);
+}
+
+.header-max-container{
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-btn-container{
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-20);
+    flex-wrap: wrap;
+}
+
+.head-btn-container .head-btn{
+    padding: 4px 10px;
+    border: 2px solid var(--color-gray-blue);
+    border-radius: var(--border-radius-15);
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    transition: var(--transition-1);
+    background-color: var(--color-gray-blue);
+}
+
+.head-btn-container .head-btn:hover{
+    background-color: var(--color-warning);
+    border: 2px solid var(--color-warning);
+    color: var(--color-white);
+    padding: 4px 15px;
+}
+
+.head-btn-container .head-btn a{
+    color: var(--color-white);
+    font-size: var(--fon-size-16);
+    font-weight: var(--font-weight-600);
+    transition: var(--transition-1);
+}
+
+.head-for-user-acc{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-20);
+    flex-wrap: wrap;
+    background-color: red;
+    background-color: var(--color-light-gray);
+}
+
+.head-ac-max{
+    width: 90%;
+    max-width: 1200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.head-ac-max span{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: var(--font-family-1);
+    flex: 1;
+}
+
+.acc-user{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: var(--gap-20);
+}
+
+.acc-user-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acc-user-box a{
+    color: var(--color-black);
+    transition: var(--transition-1);
+}
+
+.acc-user-box a:hover{
+    color: var(--color-yellow);
 }
