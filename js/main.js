@@ -7,19 +7,94 @@ const BASE_URL = `https://dummyjson.com/products/category/smartphones`;
 let productSection = document.getElementById('product-section');
 
 async function fetchProducts() {
-  try {
-    const response = await fetch(BASE_URL);
-    const data = await response.json();
-    renderProduct(data.products);  // ✅ Pass product list to renderer
-  } catch (error) {
-    console.log('Error fetching products:', error);
-  }
+    try {
+        const response = await fetch(BASE_URL);
+        const data = await response.json();
+        renderProduct(data.products);
+
+
+        class ProductCard {
+            constructor(cardElement) {
+                this.card = cardElement;
+                this.quantity = 0;
+                this.quantitySort = 0;
+                this.ifBrowning = false;
+
+                this.quantityDisplay = this.card.querySelector('.show-counter-product-card');
+                this.increaseBtn = this.card.querySelector('.increase');
+                this.decreaseBtn = this.card.querySelector('.decrease');
+                this.heartIcon = this.card.querySelector('.bxs-heart');
+                this.shopingBagIcon = this.card.querySelector('.bx-shopping-bag');
+                this.showAllCounterProductCard = document.getElementById('counter-basket-h1');
+                this.CounterSort = document.getElementById('counter-sort-h1');
+
+
+
+                this.increaseBtn.addEventListener('click', () => this.increase());
+                this.decreaseBtn.addEventListener('click', () => this.decrease());
+                this.heartIcon.addEventListener('click', () => this.browningheart());
+                this.shopingBagIcon.addEventListener('click', () => this.addToBasket());
+            }
+
+            updateDisplay() {
+                this.quantityDisplay.textContent = this.quantity;
+                this.CounterSort.innerHTML = this.quantitySort;
+            }
+
+            increase() {
+                this.quantity++;
+                this.updateDisplay();
+            }
+
+            decrease() {
+                if (this.quantity > 0) {
+                    this.quantity--;
+                    this.updateDisplay();
+                }
+            }
+
+            browningheart() {
+                if (!this.ifBrowning) {
+                    this.heartIcon.style.color = 'red';
+                    this.ifBrowning = true;
+                    this.quantitySort++;
+                    this.updateDisplay()
+                    
+
+                } else {
+                    this.heartIcon.style.color = 'var(--color-gray-blue)';
+                    this.ifBrowning = false;
+                    this.quantitySort--;
+                    this.updateDisplay()
+                }
+            }
+
+            addToBasket() {
+                if (this.quantity > 0) {
+                    this.showAllCounterProductCard.innerHTML = parseInt(this.showAllCounterProductCard.innerHTML) + this.quantity;
+                    this.updateDisplay();
+                } else {
+                    alert('Please increase the quantity before adding to the basket.');
+                }
+            }
+        }
+
+        document.querySelectorAll('.product-card').forEach(card => {
+            new ProductCard(card);
+        });
+
+
+    } catch (error) {
+        console.log('Error fetching products:', error);
+    }
 }
+
+
 
 function renderProduct(products) {
     productSection.innerHTML = '';
     products.map((product) => {
-      productSection.innerHTML += `
+        productSection.innerHTML += `
         <div class="product-card">
           <div class="product-head">
               <img src="${product.thumbnail}" alt="${product.title}">
@@ -59,27 +134,21 @@ function renderProduct(products) {
                       <i class='bx bx-minus'></i>
                   </div>
                   <div class="show-cunt-product">
-                      <h1 id="show-counter-product-card">0</h1>
+                      <h1 class="show-counter-product-card">0</h1>
                   </div>
                   <div id="increase" class="increase">
                       <i class='bx bx-plus'></i>
                   </div>
               </div>
-              <div id="salom" class="shop-product-btn">
+              <button class="shop-product-btn">
                   <i class="bx bx-shopping-bag"></i>
-              </div>
+              </button>
           </div>
         </div>
       `;
     });
-  }
-  
+}
+
 
 fetchProducts();
 
-let addToShop = document.getElementById('salom')
-
-addToShop.addEventListener('click', ()=>{
-    console.log('salom');
-    
-})

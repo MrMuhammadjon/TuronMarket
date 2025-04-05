@@ -358,9 +358,9 @@ header:hover {
     gap: var(--gap-10);
 }
 
-.head-dash-btn .Categories a #counter-categories, .head-dash-btn .sort-products a #counter-csort-products, .head-dash-btn .basket a #counter-basket {
-    width: 20px;
-    height: 20px;
+.head-dash-btn .Categories a #counter-categories h1, .head-dash-btn .sort-products a #counter-sort-products h1, .head-dash-btn .basket a #counter-basket h1{
+    width: 25px;
+    height: 25px;
     background-color: var(--color-light-green);
     color: var(--color-white);
     border-radius: var(--border-radius-10);
@@ -369,7 +369,8 @@ header:hover {
     justify-content: center;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -10px;
+    font-size: var(--fon-size-20);
 }
 
 
@@ -539,7 +540,6 @@ main {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    box-shadow: var(--box-shadow-4);
     transition: var(--transition-1);
 }
 
