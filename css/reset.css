@@ -332,6 +332,7 @@ header:hover {
     gap: var(--gap-10);
     height: 50%;
     padding: 0 10px;
+    position: relative;
 }
 
 .head-dash-btn .Categories,
@@ -345,6 +346,21 @@ header:hover {
     justify-content: center;
     gap: var(--gap-10);
 }
+
+.head-dash-btn .Categories a #counter-categories, .head-dash-btn .sort-products a #counter-csort-products, .head-dash-btn .basket a #counter-basket {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    border-radius: var(--border-radius-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 
 .head-dash-btn .basket a span {
     display: flex;
