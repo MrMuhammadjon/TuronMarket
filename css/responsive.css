@@ -38,6 +38,14 @@
     .header-max-container .head-dash .head-dash-btn {
         gap: 10px;
     }
+
+    .home-section .home-page {
+        height: 400px;
+    }
+
+    .home-section .home-page .c{
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {

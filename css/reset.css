@@ -823,7 +823,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: var(--gap-30);
     max-width: 1200px;
-    width: 100%;
+    width: 90%;
     margin-top: 150px;
   }
 
