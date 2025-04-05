@@ -496,7 +496,6 @@ main {
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1f));
-    padding: 20px;
     gap: var(--gap-30);
 }
 
@@ -515,7 +514,7 @@ main {
     transition: var(--transition-1);
 }
 
-.product-card:hover{
+.product-card:hover {
     transform: translateY(-10px);
 }
 
@@ -647,7 +646,7 @@ main {
     justify-content: space-between;
 }
 
-.product-footer{
+.product-footer {
     gap: var(--gap-20);
 }
 
@@ -661,7 +660,8 @@ main {
     flex: 1;
 }
 
-.decrease, .increase{
+.decrease,
+.increase {
     height: 30px;
     width: 30px;
     border: 1px solid var(--color-black);
@@ -673,15 +673,16 @@ main {
     background-color: var(--color-light-gray);
 }
 
-.decrease .bx{
+.decrease .bx {
     color: var(--color-red);
 }
 
 
-.increase .bx{
+.increase .bx {
     color: var(--color-light-green);
 }
-.show-cunt-product{
+
+.show-cunt-product {
     flex: 1;
     height: 100%;
     display: flex;
@@ -689,12 +690,12 @@ main {
     justify-content: center;
 }
 
-.show-cunt-product h1{
+.show-cunt-product h1 {
     font-size: var(--fon-size-24);
     font-weight: var(--font-weight-600);
 }
 
-.shop-product-btn{
+.shop-product-btn {
     flex: 1;
     border-radius: var(--border-radius-10);
     background-color: var(--color-light-green);
@@ -706,18 +707,174 @@ main {
     border: 1px solid var(--color-light-green);
     transition: var(--transition-2);
     cursor: pointer;
-    &:hover{
+
+    &:hover {
         background: none;
         transform: translateY(-5px);
     }
 }
 
-.shop-product-btn .bx{
+.shop-product-btn .bx {
     font-size: var(--fon-size-20);
     color: var(--color-white);
     transition: var(--transition-1);
 }
 
-.shop-product-btn:hover .bx{
+.shop-product-btn:hover .bx {
     color: var(--color-light-green);
 }
+
+.brands-section {
+    max-width: 1200px;
+    margin: 120px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-30);
+}
+
+.brands-section h2 {
+    margin-bottom: 5px;
+}
+
+.brands-section p {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.brands-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--gap-30);
+}
+
+.brand-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    transition: var(--transition-1);
+    transition: var(--transition-1);
+}
+
+.brand-item:hover{
+    transform: translateY(-10px);
+}
+
+.brand-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+
+.options-grid {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.option-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: var(--border-radius-20);
+    background-color: #e5f0ff;
+    /* Default blue-ish */
+    gap: var(--gap-15);
+    transition: var(--transition-1);
+    cursor: pointer;
+}
+
+.option-box:hover{
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-3);
+}
+
+.option-box.yellow {
+    background-color: #fff5cc;
+}
+
+.option-box img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.option-text h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.option-text p {
+    margin: 5px 0 0 0;
+    color: gray;
+    font-size: 14px;
+}
+
+
+.special-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--gap-30);
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 150px;
+  }
+
+  .special-box {
+    height: 250px;
+    background: #36a846;
+    color: white;
+    border-radius: var(--border-radius-20);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: var(--transition-1);
+  }
+
+  .special-box:hover{
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-4);
+  }
+
+  .special-box img {
+    width: 100px;
+    height: auto;
+    border-radius: 8px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1;
+  }
+
+  .special-box span {
+    color: #ffeb3b;
+    font-weight: bold;
+  }
+
+  .special-box h2, .special-box p {
+    margin: 0;
+    line-height: 1.4;
+    z-index: 2;
+    position: relative;
+  }
+
+  .special-box h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+  }
+
+  .special-box p {
+    font-size: 1.2rem;
+  }
+
+  .special-box:nth-child(odd) {
+    background: #4caf50;
+  }
