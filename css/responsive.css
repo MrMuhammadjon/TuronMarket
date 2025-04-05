@@ -37,13 +37,14 @@
 
     .header-max-container .head-dash .head-dash-btn {
         gap: 10px;
+        flex: 0.5;
     }
 
     .home-section .home-page {
         height: 400px;
     }
 
-    .home-section .home-page .c{
+    .home-section .home-page .c {
         height: 300px;
     }
 }
@@ -52,6 +53,10 @@
 
     header .head-max-container-1 {
         display: none;
+    }
+
+    .head-dash .logo {
+        display: none !important;
     }
 
     .head-ac-max .menu {
@@ -64,11 +69,18 @@
 
     .options-grid {
         grid-template-columns: 1fr !important;
-      }
+    }
+
+    .head-ac-max span {
+        display: none !important;
+    }
+
+    .head-ac-max .logo2{
+        display: flex !important;
+    }
 }
 
-@media (max-width: 576px) {
-}
+@media (max-width: 576px) {}
 
 @media (max-width: 480px) {
     .brands-section .brands-grid {

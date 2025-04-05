@@ -194,6 +194,17 @@ header:hover {
     flex: 1;
 }
 
+.head-ac-max .logo2{
+    width: 100px;
+    height: 40px;
+    display: none;
+}
+
+.head-ac-max .logo2 a img{
+    width: 150px;
+    height: 40px;
+}
+
 .acc-user {
     flex: 1.5;
     display: flex;
