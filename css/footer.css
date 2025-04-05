@@ -1,0 +1,82 @@
+.footer {
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+.footer-container{
+    padding: 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--color-black);
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: var(--color-light-green);
+}
+
+.footer-contact {
+    font-size: 14px;
+    color: var(--color-gray);
+    margin: 10px 0;
+}
+
+.footer-contact strong {
+    font-size: 18px;
+    color: var(--color-gray-blue);
+    display: block;
+    margin-top: 5px;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    color: var(--color-gray);
+}
+
+.footer-icon img {
+    width: 16px;
+    margin-right: 10px;
+}
+
+.footer-heading {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: var(--fon-size-18);
+}
+
+.footer-link {
+    display: block;
+    margin: 6px 0;
+    text-decoration: none;
+    color: #333;
+    font-size: var(--fon-size-14);
+}
+
+.footer-badges {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-badges img {
+    height: 40px;
+}
