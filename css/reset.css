@@ -788,6 +788,7 @@ main {
     gap: var(--gap-15);
     transition: var(--transition-1);
     cursor: pointer;
+    position: relative;
 }
 
 .option-box:hover{
@@ -802,7 +803,7 @@ main {
 .option-box img {
     width: 80px;
     height: 60px;
-    object-fit: cover;
+    object-fit: cover;  
 }
 
 .option-text h4 {
@@ -845,7 +846,7 @@ main {
   }
 
   .special-box img {
-    width: 100px;
+    width: 300px;
     height: auto;
     border-radius: 8px;
     position: absolute;
@@ -877,4 +878,61 @@ main {
 
   .special-box:nth-child(odd) {
     background: #4caf50;
+  }
+
+
+  .whatsapp-banner {
+    margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9fafa;
+    border-radius: 8px;
+    padding: 20px 30px;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: var(--box-shadow-2);
+    border: 1px solid var(--color-gray-blue);
+  }
+
+  .whatsapp-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .whatsapp-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .whatsapp-text {
+    font-size: var(--fon-size-24);
+    line-height: 1.4;
+  }
+
+  .whatsapp-text span {
+    color: #25D366;
+    font-weight: bold;
+  }
+
+  .whatsapp-text strong {
+    display: block;
+    color: #111;
+    font-size: 20px;
+  }
+
+  .join-btn {
+    background-color: #1c1c1c;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    font-size: var(--fon-size-24);
+    border-radius: var(--border-radius-20);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .join-btn:hover {
+    background-color: #000;
   }
