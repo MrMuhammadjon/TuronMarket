@@ -55,17 +55,17 @@ function renderProduct(products) {
           </div>
           <div class="product-footer">
               <div class="product-counter">
-                  <div class="decrease">
+                  <div id="decrease" class="decrease">
                       <i class='bx bx-minus'></i>
                   </div>
                   <div class="show-cunt-product">
-                      <h1>0</h1>
+                      <h1 id="show-counter-product-card">0</h1>
                   </div>
-                  <div class="increase">
+                  <div id="increase" class="increase">
                       <i class='bx bx-plus'></i>
                   </div>
               </div>
-              <div class="shop-product-btn">
+              <div id="salom" class="shop-product-btn">
                   <i class="bx bx-shopping-bag"></i>
               </div>
           </div>
@@ -76,3 +76,10 @@ function renderProduct(products) {
   
 
 fetchProducts();
+
+let addToShop = document.getElementById('salom')
+
+addToShop.addEventListener('click', ()=>{
+    console.log('salom');
+    
+})

@@ -521,8 +521,10 @@ main {
 .product-section {
     width: 90%;
     max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1f));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--gap-30);
 }
 
