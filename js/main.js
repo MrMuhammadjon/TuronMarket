@@ -3,6 +3,7 @@
 // .then(res => res.json())
 // .then(console.log);
 
+
 const BASE_URL = `https://dummyjson.com/products/category/smartphones`;
 let productSection = document.getElementById('product-section');
 
@@ -17,16 +18,17 @@ async function fetchProducts() {
             constructor(cardElement) {
                 this.card = cardElement;
                 this.quantity = 0;
-                this.quantitySort = 0;
+                this.quantitySort = 0; // Boshlang'ich qiymat
                 this.ifBrowning = false;
 
                 this.quantityDisplay = this.card.querySelector('.show-counter-product-card');
                 this.increaseBtn = this.card.querySelector('.increase');
                 this.decreaseBtn = this.card.querySelector('.decrease');
                 this.heartIcon = this.card.querySelector('.bxs-heart');
-                this.shopingBagIcon = this.card.querySelector('.bx-shopping-bag');
+                this.shopingBagIcon = this.card.querySelector('.shop-product-btn');
                 this.showAllCounterProductCard = document.getElementById('counter-basket-h1');
                 this.CounterSort = document.getElementById('counter-sort-h1');
+                
 
 
 
@@ -38,11 +40,11 @@ async function fetchProducts() {
 
             updateDisplay() {
                 this.quantityDisplay.textContent = this.quantity;
-                this.CounterSort.innerHTML = this.quantitySort;
+                this.CounterSort.textContent = this.quantitySortN;
             }
 
             increase() {
-                this.quantity++;
+                this.quantity++;   
                 this.updateDisplay();
             }
 
@@ -58,15 +60,12 @@ async function fetchProducts() {
                     this.heartIcon.style.color = 'red';
                     this.ifBrowning = true;
                     this.quantitySort++;
-                    this.updateDisplay()
-                    
-
                 } else {
-                    this.heartIcon.style.color = 'var(--color-gray-blue)';
+                    this.heartIcon.style.color = 'gray';
                     this.ifBrowning = false;
                     this.quantitySort--;
-                    this.updateDisplay()
                 }
+                this.updateDisplay(); // Har bir o'zgarishdan keyin ekranni yangilash
             }
 
             addToBasket() {
