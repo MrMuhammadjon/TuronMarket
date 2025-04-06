@@ -13,12 +13,14 @@ async function fetchProducts() {
         const data = await response.json();
         renderProduct(data.products);
 
+        let globalQuantitySort = 0;
+
 
         class ProductCard {
             constructor(cardElement) {
+
                 this.card = cardElement;
                 this.quantity = 0;
-                this.quantitySort = 0; // Boshlang'ich qiymat
                 this.ifBrowning = false;
 
                 this.quantityDisplay = this.card.querySelector('.show-counter-product-card');
@@ -28,8 +30,6 @@ async function fetchProducts() {
                 this.shopingBagIcon = this.card.querySelector('.shop-product-btn');
                 this.showAllCounterProductCard = document.getElementById('counter-basket-h1');
                 this.CounterSort = document.getElementById('counter-sort-h1');
-                
-
 
 
                 this.increaseBtn.addEventListener('click', () => this.increase());
@@ -40,11 +40,11 @@ async function fetchProducts() {
 
             updateDisplay() {
                 this.quantityDisplay.textContent = this.quantity;
-                this.CounterSort.textContent = this.quantitySortN;
+                this.CounterSort.textContent = globalQuantitySort;
             }
 
             increase() {
-                this.quantity++;   
+                this.quantity++;
                 this.updateDisplay();
             }
 
@@ -59,13 +59,13 @@ async function fetchProducts() {
                 if (!this.ifBrowning) {
                     this.heartIcon.style.color = 'red';
                     this.ifBrowning = true;
-                    this.quantitySort++;
+                    globalQuantitySort++;
                 } else {
                     this.heartIcon.style.color = 'gray';
                     this.ifBrowning = false;
-                    this.quantitySort--;
+                    if (globalQuantitySort > 0) globalQuantitySort--;
                 }
-                this.updateDisplay(); // Har bir o'zgarishdan keyin ekranni yangilash
+                this.updateDisplay();
             }
 
             addToBasket() {
@@ -78,17 +78,19 @@ async function fetchProducts() {
             }
         }
 
-        document.querySelectorAll('.product-card').forEach(card => {
-            new ProductCard(card);
+
+
+        Array.from(document.querySelectorAll('.product-card')).map((cardElement) => {
+            new ProductCard(cardElement);
         });
+
+
 
 
     } catch (error) {
         console.log('Error fetching products:', error);
     }
 }
-
-
 
 function renderProduct(products) {
     productSection.innerHTML = '';
@@ -147,7 +149,6 @@ function renderProduct(products) {
       `;
     });
 }
-
 
 fetchProducts();
 

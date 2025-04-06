@@ -36,7 +36,7 @@
 
 
     .header-max-container .head-dash .head-dash-btn {
-        gap: 10px;
+        gap: var(--gap-20);
         flex: 0.5;
     }
 

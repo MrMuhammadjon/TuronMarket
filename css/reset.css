@@ -599,27 +599,27 @@ main {
 }
 
 .product-main-Special-offers .symbols {
-    padding: 5px 8px;
+    padding: 3px 8px;
     background-color: var(--color-red);
     border-radius: var(--border-radius-15);
 }
 
 .product-main-Special-offers .symbols h1 {
-    font-size: var(--fon-size-16);
+    font-size: var(--fon-size-14);
     font-weight: var(--font-weight-400);
     color: var(--color-white);
 
 }
 
 .at-symbols {
-    padding: 5px 8px;
+    padding: 3px 8px;
     background-color: var(--color-light-green);
     border-radius: var(--border-radius-15);
     color: var(--color-white);
 }
 
 .at-symbols p {
-    font-size: var(--fon-size-16);
+    font-size: var(--fon-size-14);
 }
 
 .product-main .about-product {
@@ -1029,4 +1029,96 @@ main {
   .promo-image img {
     width: 200px;
     max-width: 100%;
+  }
+
+  main{
+    display: none;
+  }
+
+  footer{
+    display: none;
+  }
+
+  .inter-acc-continer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 600px;
+    position:absolute;
+    z-index: 100;
+    background-color: var(--color-light-gray);
+  }
+
+
+  .inter-acc {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 500px;
+  }
+
+  .inter-acc h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .inter-acc p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 14px;
+  }
+
+  .input-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+  }
+
+  .input-box input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    margin-left: 8px;
+  }
+
+  .input-box::before {
+    content: "📞";
+    font-size: 18px;
+  }
+
+  .terms {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+
+  .terms a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .send-btn {
+    background-color: #28c26b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .send-btn:hover {
+    background-color: #24b163;
   }
