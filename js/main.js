@@ -14,15 +14,15 @@ async function fetchProducts() {
         renderProduct(data.products);
 
         let globalQuantitySort = 0;
+        let globalSHowAllCounterProductCard = [];
 
 
         class ProductCard {
             constructor(cardElement) {
-
                 this.card = cardElement;
                 this.quantity = 0;
                 this.ifBrowning = false;
-
+                
                 this.quantityDisplay = this.card.querySelector('.show-counter-product-card');
                 this.increaseBtn = this.card.querySelector('.increase');
                 this.decreaseBtn = this.card.querySelector('.decrease');
@@ -30,7 +30,6 @@ async function fetchProducts() {
                 this.shopingBagIcon = this.card.querySelector('.shop-product-btn');
                 this.showAllCounterProductCard = document.getElementById('counter-basket-h1');
                 this.CounterSort = document.getElementById('counter-sort-h1');
-
 
                 this.increaseBtn.addEventListener('click', () => this.increase());
                 this.decreaseBtn.addEventListener('click', () => this.decrease());
@@ -50,11 +49,11 @@ async function fetchProducts() {
 
             decrease() {
                 if (this.quantity > 0) {
-                    this.quantity--;
+                    this.quantity--; // .pop(this.quantity) emas
                     this.updateDisplay();
                 }
             }
-
+            
             browningheart() {
                 if (!this.ifBrowning) {
                     this.heartIcon.style.color = 'red';
@@ -68,8 +67,11 @@ async function fetchProducts() {
                 this.updateDisplay();
             }
 
-            addToBasket() {
+            addToBasket(card) {  
                 if (this.quantity > 0) {
+                    globalSHowAllCounterProductCard.push(card);
+                    console.log(globalSHowAllCounterProductCard);
+                    
                     this.showAllCounterProductCard.innerHTML = parseInt(this.showAllCounterProductCard.innerHTML) + this.quantity;
                     this.updateDisplay();
                 } else {
@@ -78,14 +80,11 @@ async function fetchProducts() {
             }
         }
 
-
-
         Array.from(document.querySelectorAll('.product-card')).map((cardElement) => {
             new ProductCard(cardElement);
         });
 
-
-
+        
 
     } catch (error) {
         console.log('Error fetching products:', error);
@@ -151,4 +150,3 @@ function renderProduct(products) {
 }
 
 fetchProducts();
-

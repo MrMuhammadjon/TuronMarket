@@ -1,0 +1,300 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: var(--box-shadow-3);
+    transition: var(--transition-1);
+}
+
+header:hover {
+    box-shadow: var(--box-shadow-5);
+}
+
+.header-max-container {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-btn-container {
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--gap-20);
+    flex-wrap: wrap;
+}
+
+.head-btn-container .head-btn {
+    flex: 1;
+    padding: 4px 5px;
+    border: 2px solid var(--color-gray-blue);
+    border-radius: var(--border-radius-15);
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-content: center;
+    transition: var(--transition-1);
+    background-color: var(--color-gray-blue);
+}
+
+.head-btn-container .head-btn:hover {
+    background-color: var(--color-warning);
+    border: 2px solid var(--color-warning);
+    color: var(--color-white);
+    padding: 4px 15px;
+}
+
+.head-btn-container .head-btn a {
+    color: var(--color-white);
+    font-size: var(--fon-size-14);
+    font-weight: var(--font-weight-600);
+    transition: var(--transition-1);
+}
+
+.head-for-user-acc {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-20);
+    flex-wrap: wrap;
+    background-color: red;
+    background-color: var(--color-light-gray);
+    position: sticky;
+}
+
+.head-ac-max {
+    width: 90%;
+    max-width: 1200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.head-ac-max span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: var(--font-family-1);
+    flex: 1;
+}
+
+.head-ac-max .logo2 {
+    width: 100px;
+    height: 40px;
+    display: none;
+}
+
+.head-ac-max .logo2 a img {
+    width: 150px;
+    height: 40px;
+}
+
+.acc-user {
+    flex: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: var(--gap-20);
+}
+
+.acc-user-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--color-gray-blue);
+    padding-right: 10px;
+}
+
+.acc-user-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-black);
+    transition: var(--transition-1);
+}
+
+.acc-user-box a:hover {
+    color: var(--color-yellow);
+}
+
+.acc-user-box a h1 {
+    font-size: var(--fon-size-12);
+    font-weight: var(--font-weight-400);
+}
+
+.head-max-container-2 {
+    position: sticky;
+}
+
+.head-dash {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    gap: var(--gap-20);
+}
+
+.head-dash .logo,
+.head-dash .head-search,
+.head-dash .head-dash-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head-dash .logo {
+    justify-content: start;
+}
+
+.head-dash .logo img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: var(--border-radius-10);
+}
+
+.input-head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: wheat;
+    border-radius: var(--border-radius-10);
+    padding: 5px 10px;
+}
+
+.input-head input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    border-radius: var(--border-radius-10);
+    border: 1px solid var(--color-black);
+    font-size: var(--fon-size-16);
+    font-weight: var(--font-weight-400);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    outline: none;
+    border: none;
+    min-width: 190px;
+}
+
+.input-head input::placeholder {
+    color: var(--color-gray-blue);
+    font-size: var(--fon-size-16);
+    font-weight: var(--font-weight-400);
+}
+
+.input-head .bx {
+    color: var(--color-black);
+    font-size: var(--fon-size-20);
+    font-weight: var(--font-weight-400);
+    cursor: pointer;
+    width: 40px;
+}
+
+.head-dash .head-dash-btn {
+    justify-content: end;
+    gap: var(--gap-20);
+    height: 100%;
+}
+
+.head-dash .head-dash-btn .bx {
+    border: 2px solid var(--color-gray-blue);
+    border-radius: var(--border-radius-15);
+    cursor: pointer;
+    transition: var(--transition-1);
+    background-color: var(--color-gray-blue);
+    color: var(--color-white);
+    padding: 5px;
+    font-size: var(--fon-size-32);
+}
+
+.head-dash .head-dash-btn .bx:hover {
+    background: none;
+    color: var(--color-gray-blue);
+}
+
+.head-dash-btn .Categories,
+.head-dash-btn .sort-products,
+.head-dash-btn .basket {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-10);
+    height: 50%;
+    padding: 0 10px;
+    position: relative;
+}
+
+.head-dash-btn .Categories,
+.head-dash-btn .sort-products {
+    border-right: 1px solid var(--color-gray-blue);
+}
+
+.head-dash-btn .basket a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-10);
+}
+
+.head-dash-btn .Categories a #counter-categories h1,
+.head-dash-btn .sort-products a #counter-sort-products h1,
+.head-dash-btn .basket a #counter-basket h1 {
+    width: 25px;
+    height: 25px;
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    border-radius: var(--border-radius-10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: -10px;
+    font-size: var(--fon-size-20);
+}
+
+
+.head-dash-btn .basket a span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-10);
+    font-size: var(--fon-size-28);
+    color: var(--color-gray-blue);
+}
+
+.head-dash-btn .basket a span h1 {
+    font-size: var(--fon-size-24);
+    font-weight: var(--font-weight-500);
+}
+
+.menu {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.menu .bx {
+    font-size: var(--fon-size-32);
+    cursor: pointer;
+}
