@@ -22,7 +22,9 @@ async function fetchProducts() {
                 this.card = cardElement;
                 this.quantity = 0;
                 this.ifBrowning = false;
-                
+                console.log(this.card);
+
+
                 this.quantityDisplay = this.card.querySelector('.show-counter-product-card');
                 this.increaseBtn = this.card.querySelector('.increase');
                 this.decreaseBtn = this.card.querySelector('.decrease');
@@ -49,11 +51,11 @@ async function fetchProducts() {
 
             decrease() {
                 if (this.quantity > 0) {
-                    this.quantity--; // .pop(this.quantity) emas
+                    this.quantity--;
                     this.updateDisplay();
                 }
             }
-            
+
             browningheart() {
                 if (!this.ifBrowning) {
                     this.heartIcon.style.color = 'red';
@@ -67,11 +69,11 @@ async function fetchProducts() {
                 this.updateDisplay();
             }
 
-            addToBasket(card) {  
+            addToBasket(card) {
                 if (this.quantity > 0) {
                     globalSHowAllCounterProductCard.push(card);
                     console.log(globalSHowAllCounterProductCard);
-                    
+
                     this.showAllCounterProductCard.innerHTML = parseInt(this.showAllCounterProductCard.innerHTML) + this.quantity;
                     this.updateDisplay();
                 } else {
@@ -84,7 +86,7 @@ async function fetchProducts() {
             new ProductCard(cardElement);
         });
 
-        
+
 
     } catch (error) {
         console.log('Error fetching products:', error);
