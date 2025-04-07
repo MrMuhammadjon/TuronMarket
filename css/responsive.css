@@ -47,6 +47,21 @@
     .home-section .home-page .c {
         height: 300px;
     }
+
+    .container {
+        flex-direction: column;
+      }
+    
+      .cart-item {
+        justify-content: space-between;
+      }
+    
+      .price,
+      .total,
+      .remove {
+        width: auto;
+        font-size: 0.9em;
+      }
 }
 
 @media (max-width: 768px) {
@@ -78,6 +93,8 @@
     .head-ac-max .logo2{
         display: flex !important;
     }
+
+    
 }
 
 @media (max-width: 576px) {}
