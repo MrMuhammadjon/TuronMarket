@@ -11,6 +11,8 @@ async function fetchProducts() {
     try {
         const response = await fetch(BASE_URL);
         const data = await response.json();
+        console.log(data);
+        
         renderProduct(data.products);
 
         let globalQuantitySort = 0;
@@ -73,15 +75,15 @@ async function fetchProducts() {
                 if (this.quantity > 0) {
                     globalSHowAllCounterProductCard.push(card);
                     console.log(globalSHowAllCounterProductCard);
-
                     this.showAllCounterProductCard.innerHTML = parseInt(this.showAllCounterProductCard.innerHTML) + this.quantity;
                     this.updateDisplay();
+                    
                 } else {
                     alert('Please increase the quantity before adding to the basket.');
                 }
             }
         }
-
+        
         Array.from(document.querySelectorAll('.product-card')).map((cardElement) => {
             new ProductCard(cardElement);
         });
